@@ -1,0 +1,14 @@
+Power of Pow | Odd Numbers
+
+class Solution
+{
+    public long sum_of_square_oddNumbers(long n)
+    {
+        // Code here
+        long sum = 0;
+        for(long i=1;i<=n;i++){
+            sum += (((i*2)-1)*((i*2)-1));
+        }
+        return sum;
+    }
+}
