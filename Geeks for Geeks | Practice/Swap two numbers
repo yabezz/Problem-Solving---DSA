@@ -1,0 +1,12 @@
+Swap two numbers
+
+class Solution{
+    static List<Integer> get(int a,int b)
+    {
+        // code here
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(b);
+        al.add(a);
+        return al;
+    }
+}
