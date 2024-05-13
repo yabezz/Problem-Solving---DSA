@@ -1,0 +1,18 @@
+Sort a String
+
+class Solution 
+{ 
+    String sort(String s) 
+    {
+        ArrayList<Character> al = new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            al.add(s.charAt(i));
+        }
+        s = "";
+        Collections.sort(al);
+        for(char ch : al){
+            s+=ch;
+        }
+        return s;
+    }
+} 
