@@ -1,0 +1,21 @@
+Sum of Digit is Pallindrome or not
+
+class Solution {
+    int isDigitSumPalindrome(int n) {
+        int sum = 0;
+        while(n!=0)
+        {
+            sum += n%10;
+            n/=10;
+        }
+        String a = "" + sum;
+        StringBuilder sb = new StringBuilder(a);
+        sb.reverse();
+        String b = sb.toString(); 
+        // System.out.println(a +" " + b);
+        if(a.equals(b)){
+            return 1;
+        }
+        return 0;
+    }
+}
