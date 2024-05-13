@@ -1,0 +1,14 @@
+Parallel or Perpendicular
+
+class Solution
+{
+    public int find(int[] a, int[] b)
+    {
+        int dotProduct = a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+        int crossProduct = (a[1] * b[2] - a[2] * b[1]) - (a[0] * b[2] - b[0] * a[2]) + (a[0] * b[1] - a[1] * b[0]);
+        if(crossProduct == 0)
+        return 1;
+        else if(dotProduct == 0)
+        return 2;
+        return 0;
+    }
