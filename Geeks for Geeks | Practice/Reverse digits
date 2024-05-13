@@ -1,0 +1,13 @@
+Reverse digits
+
+class Solution
+{
+    public long reverse_digit(long n)
+    {
+        String str = "" + n;
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        str = sb.toString();
+        return Long.valueOf(str);
+    }
+}
