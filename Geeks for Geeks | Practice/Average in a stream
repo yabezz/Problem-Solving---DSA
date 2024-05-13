@@ -1,0 +1,19 @@
+Average in a stream
+
+class Solution {
+    float[] streamAvg(int[] arr, int n) {
+        float a[] = new float[n];
+        // int k =1;
+        int index = 0;
+        for(int i=0;i<n;i++){
+            int sum = 0;
+            int count =0;
+            for(int j=0;j<=i;j++){
+                sum += arr[j];
+                count++;
+            }
+            a[index++] = (float)sum / count;
+        }
+        return a;
+    }
+}
