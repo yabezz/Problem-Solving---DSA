@@ -1,0 +1,13 @@
+Check if two given circles touch each other
+
+class Solution {
+    int circleTouch(int X1, int Y1, int R1, int X2, int Y2, int R2) {
+        int d = (Y2 - Y1) * (Y2 - Y1) + (X2 - X1) * (X2 - X1);
+        int r = R1 + R2;
+        int j = (int) Math.sqrt(d);
+        if(j<=r)
+        return 1;
+        else
+        return 0;
+    }
+}
