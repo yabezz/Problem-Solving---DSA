@@ -1,0 +1,13 @@
+12 hour clock addition
+
+class Solution{
+    static int clockSum(int num1, int num2){
+        int y = num1 + num2;
+        if(y < 12){
+            return y;
+        }
+        else{
+            return y%12;
+        }
+    }
+}
