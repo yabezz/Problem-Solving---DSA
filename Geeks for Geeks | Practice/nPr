@@ -1,0 +1,12 @@
+nPr
+
+class Solution{
+    static long nPr(long n, long r){
+        // code here
+        long y = 1;
+        for(int i=1;i<=r;i++){
+            y *= (n-i+1);
+        }
+        return y;
+    }
+}
