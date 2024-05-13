@@ -47,3 +47,40 @@ if(palin(s)){
      return ans;
     }
 }
+
+Code :
+
+
+
+//User function Template for Java
+class Solution {
+    static boolean ispalindrome(Long n){
+        String str = "" + n;
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        String temp = sb.toString();
+        return temp.equals(str);
+        
+    }
+    
+    static long isSumPalindrome(long n){
+        if(ispalindrome(n)){
+            return n;
+        }
+        // code here
+        int count = 0;
+        while(count < 5){
+            String str = "" + n;
+            StringBuilder sb = new StringBuilder(str);
+            sb.reverse();
+            str = sb.toString();
+            n += Long.valueOf(str);// + n;
+            
+            if(ispalindrome(n)){
+                return n;
+            }
+            count++;
+        }
+        return -1;
+    }
+}
