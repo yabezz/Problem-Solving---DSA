@@ -1,0 +1,11 @@
+Surface Area and Volume of Cuboid
+
+class Solution
+{
+    public long[] find(int l, int b, int h)
+    {
+        long volume = (long)l*b*h;
+        long surface = 2L * (l * (long)b + b * (long)h + h * (long)l);
+        return new long[]{surface, volume};
+    }
+}
