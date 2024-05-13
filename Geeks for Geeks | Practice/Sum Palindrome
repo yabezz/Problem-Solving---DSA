@@ -1,0 +1,49 @@
+Sum Palindrome
+
+class Solution {
+
+     public static boolean palin(String str){
+        for(int i = 0 ; i < str.length()-i ; i++){
+            if(str.charAt(i) != str.charAt(str.length()-1-i)){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+
+       public static long rev(long n , int c){
+           if(c == 5){
+               return -1;
+           }
+           
+    long ans = 0;
+    String s = Long.toString(n);
+if(palin(s)){
+    return Long.parseLong(s);
+}
+
+     if(!palin(s)){
+         
+          String r = "";
+      for(int i = s.length()-1 ; i >= 0; i--){
+          r += s.charAt(i);
+      }
+      
+      long N = Long.parseLong(r);
+      ans = N + n;
+      
+     }
+     if(!palin(Long.toString(ans))){
+       return rev(ans,c+1); 
+     }
+     return ans;
+    }
+    
+    static long isSumPalindrome(long n){
+        // code here
+
+     long ans = rev(n,0);
+     return ans;
+    }
+}
