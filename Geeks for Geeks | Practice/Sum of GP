@@ -1,0 +1,16 @@
+Sum of GP
+
+class Solution
+{
+    public long sum_of_gp(long n, long a, long r)
+    {
+        if(n==1) return a;
+        long temp = a;
+        long sum = 0;
+        for(int i=1;i<=n;i++){
+            sum += temp;
+            temp *= r;
+        }
+        return sum;
+    }
+}
