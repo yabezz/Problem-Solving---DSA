@@ -1,0 +1,13 @@
+Power of Pow | Even Number
+
+class Solution
+{
+    public long sum_of_square_evenNumbers(long n)
+    {
+        long sum = 0;
+        for(long i=1;i<=n;i++){
+            sum += ((i*2)*(i*2));
+        }
+        return sum;
+    }
+}
