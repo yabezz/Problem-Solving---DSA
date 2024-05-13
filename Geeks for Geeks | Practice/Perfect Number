@@ -1,0 +1,28 @@
+Perfect Number
+
+class Solution {
+    int factorial(int n){
+        int result = 1;
+        while(n!=0){
+            result*=n;
+            n--;
+        }
+        return result;
+    }
+    
+    int isPerfect(int N) {
+        int tem = N;
+        int sum = 0;
+        while(N!=0){
+            int rem = N%10;
+            sum += factorial(rem);
+            N/=10;
+        }
+        if(sum == tem){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+}
