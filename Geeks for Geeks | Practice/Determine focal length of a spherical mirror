@@ -1,0 +1,13 @@
+Determine focal length of a spherical mirror
+
+class Solution
+{
+    public int findFocalLength(float R, String type)
+    {
+        int sign = 1;
+        if(type.equals("concave")){
+            return (int)Math.floor(R/2);
+        }
+        return (int) Math.floor(-R/2);
+    }
+}
