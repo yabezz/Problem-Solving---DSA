@@ -1,0 +1,12 @@
+Automorphic Number
+
+class Solution
+{
+    public String is_AutomorphicNumber(int n)
+    {
+        int temp = (int)Math.pow(n, 2);
+        if(temp%10 == n%10)
+        return "Automorphic";
+        return "Not Automorphic";
+    }
+}
