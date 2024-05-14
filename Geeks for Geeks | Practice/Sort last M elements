@@ -1,0 +1,11 @@
+Sort last M elements
+
+class Solution
+{
+    public void sortLastMelements(int[] nums, int n, int m)
+    {
+        // Code here
+        Arrays.sort(nums, n, m+n); //tim sort 
+        
+    }
+}
