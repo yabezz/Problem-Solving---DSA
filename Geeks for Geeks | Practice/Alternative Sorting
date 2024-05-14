@@ -1,0 +1,19 @@
+Alternative Sorting
+
+class Solution
+{
+    ArrayList<Long> alternateSort(long arr[] ,int N)
+    {
+        Arrays.sort(arr);
+        ArrayList<Long> al = new ArrayList<>();
+    
+        int i = 0;
+        int end = N-1;
+        while(i<=end)
+        {
+            al.add(arr[end--]);
+            al.add(arr[i++]);
+        }
+        return al;
+    }
+}
