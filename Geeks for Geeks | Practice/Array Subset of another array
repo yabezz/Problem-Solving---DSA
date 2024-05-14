@@ -1,0 +1,21 @@
+Array Subset of another array
+
+class Compute {
+    public String isSubset( long a1[], long a2[], long n, long m) {
+        ArrayList<Long> al = new ArrayList<>();
+        for(long x : a1){
+            al.add(x);
+        }
+        for(long x : a2){
+            // long lx = x;
+            int index = al.indexOf(x);
+            if(index == -1){
+                return "No";
+            }
+            else {
+                al.remove(index);
+            }
+        }
+        return "Yes";
+    }
+}
