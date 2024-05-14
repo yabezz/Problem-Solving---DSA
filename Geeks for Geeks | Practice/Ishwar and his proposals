@@ -1,0 +1,15 @@
+Ishwar and his proposals
+
+class Solution
+{
+    ArrayList <Integer> acceptedProposals (int arr[], int n)
+    {
+        // your code here
+        ArrayList<Integer> al = new ArrayList<>();
+        Arrays.sort(arr);
+        
+        al.add(arr[n-2]);
+        al.add(arr[1]);
+        return al;
+    }
+}
