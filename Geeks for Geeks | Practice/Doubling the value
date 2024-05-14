@@ -1,0 +1,15 @@
+Doubling the value
+
+class Solution
+{
+    long solve(int n, long a[], long b)
+    {
+        for(int i=0;i<n;i++){
+            if(a[i] == b)
+            {
+                b = b*2;
+            }
+        }
+        return b;
+    }
+}
