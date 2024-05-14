@@ -1,0 +1,26 @@
+Triplet Family
+
+class GfG
+{
+    public static ArrayList<Integer> findTriplet(int a[], int n)
+    {
+        // your code here
+        ArrayList<Integer> t = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i!=j){
+                    int sum = a[i] + a[j];
+                    for(int k=0;k<n;k++){
+                        if(sum == a[k]){
+                            t.add(a[i]);
+                            t.add(a[j]);
+                            t.add(a[k]);
+                            return t;
+                        }
+                    }
+                }
+            }
+        }
+        return t;
+    }
+}
