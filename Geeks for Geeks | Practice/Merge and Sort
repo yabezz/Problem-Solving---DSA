@@ -1,0 +1,21 @@
+Merge and Sort
+
+class Solution {
+
+    public static int mergeNsort(int a[], int b[], int n, int m, int answer[])
+    {
+        HashSet<Integer> hs = new HashSet<>();
+        for(int x : a){
+            hs.add(x);
+        }
+        for(int y : b){
+            hs.add(y);
+        }
+        int index = 0;
+        for(int z : hs){
+            if(z!=0)
+            answer[index++] = z;
+        }
+        return index;
+    }
+}
