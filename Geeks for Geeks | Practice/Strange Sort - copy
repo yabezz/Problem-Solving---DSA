@@ -1,0 +1,22 @@
+Strange Sort - copy
+
+
+class Sol
+{
+    void strangeSort (int A[], int N, int K)
+    {
+        // your code here
+        int temp = A[K-1];
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int x : A){
+            al.add(x);
+        }
+        al.remove(K-1);
+        Collections.sort(al);
+        al.add(K-1, temp);
+        int index = 0;
+        for(int x : al){
+            A[index++] = x;
+        }
+    }
+}
