@@ -1,0 +1,9 @@
+class GfG {
+    int convertfive(int num) {
+        // Your code here
+        String str = new String();
+        str+=num;
+        str = str.replace("0", "5");
+        return Integer.valueOf(str);
+    }
+}
