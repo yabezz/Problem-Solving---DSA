@@ -1,0 +1,18 @@
+class Solution
+{
+    long getIndexInSortedArray(long arr[], int n,int index)
+    {
+        long counter = 0;
+        for(int i=0;i<index;i++){
+            if(arr[i]<=arr[index]){
+                counter++;
+            }
+        }
+        for(int i=index + 1;i<n;i++){
+            if(arr[i]  < arr[index]){
+                counter++;
+            }
+        }
+        return counter;
+    }
+}
