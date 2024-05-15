@@ -6,7 +6,7 @@ class Solve {
             if(arr[i] >= x){
                 more++;
             }
-            else if(arr[i] <= x){
+            if(arr[i] <= x){
                 less++;
             }
         }
