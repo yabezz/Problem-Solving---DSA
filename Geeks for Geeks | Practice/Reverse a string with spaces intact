@@ -1,0 +1,22 @@
+class Solution
+{
+    String reverseWithSpacesIntact(String S)
+    {
+        // your code here
+        String str = S.replace(" ", "");
+        int count = str.length() - 1;
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=0; i<S.length(); i++){
+            if(S.charAt(i) == ' '){
+                sb.append(' ');
+            }
+            else{
+                sb.append(str.charAt(count--));
+            }
+        }
+        
+        return sb.toString();
+    }
+}
