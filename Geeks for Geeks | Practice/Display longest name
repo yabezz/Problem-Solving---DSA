@@ -1,0 +1,15 @@
+class Solution {
+    public static String longest(int n, String[] names) {
+        // code here
+        int max = names[0].length();
+        String result = new String();
+        result = names[0];
+        for(int i=1;i<names.length;i++){
+            if(names[i].length()>max){
+                max = names[i].length();
+                result = names[i];
+            }
+        }
+        return result;
+    }
+}
