@@ -1,0 +1,21 @@
+class Solution
+{
+    public int[] countOddEven(int[] arr, int n)
+    {
+        // Code here
+        int odd = 0;
+        int even = 0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%2 == 0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        int a[] = new int[2];
+        a[0] = odd;
+        a[1] = even;
+        return a;
+    }
+}
