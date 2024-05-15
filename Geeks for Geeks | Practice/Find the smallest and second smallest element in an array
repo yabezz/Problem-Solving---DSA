@@ -1,0 +1,22 @@
+class Compute 
+{
+    public long[] minAnd2ndMin(long a[], long n)  
+    {
+        
+        HashSet<Long> hs = new HashSet<>();
+        for(long x : a){
+            hs.add(x);
+        }
+        ArrayList<Long> al = new ArrayList<>(hs);
+        Collections.sort(al);
+        long b[] = new long[2];
+        if(al.size() < 2){
+            b[0] = -1;
+            b[1] = -1;
+            return b;
+        }
+        b[0] = al.get(0);
+        b[1] = al.get(1);
+        return b;
+    }
+}
