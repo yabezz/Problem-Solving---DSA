@@ -1,0 +1,10 @@
+class Solution {
+   
+    boolean fascinating(long n) {
+        String concatenated = n + "" + (n * 2) + "" + (n * 3);
+        char[] digits = concatenated.toCharArray();
+        Arrays.sort(digits);
+        String sortedString = new String(digits);
+        return "123456789".equals(sortedString);
+    }
+}
