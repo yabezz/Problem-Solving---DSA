@@ -1,0 +1,19 @@
+class Complete{
+    // Function for finding maximum and value pair
+    public static int min_soldiers (int arr[], int n, int K) {
+        //Complete the function
+        int ans = 0;
+        List<Integer> ls = new ArrayList<>();
+        for(int x : arr){
+            int mod = x%K;
+            int required = (mod == 0) ? 0 : K - mod;
+            ls.add(required);
+        }
+        Collections.sort(ls);
+        int mid = (n+1)/2;
+        for(int i=0;i<mid;i++){
+            ans += ls.get(i);
+        }
+        return ans;
+    }
+}
