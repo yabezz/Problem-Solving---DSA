@@ -1,0 +1,13 @@
+class Solution
+{
+    int count = 1;
+    
+  public void printNos(int N)
+    {
+        if(N > 0){
+            System.out.print(count + " ");
+            count++;
+            printNos(N-1);
+        }
+    }
+}
