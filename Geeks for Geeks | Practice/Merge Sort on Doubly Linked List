@@ -1,0 +1,57 @@
+/*
+class Node
+{
+    int data;
+    Node next, prev;
+    Node(int data)
+    {
+        this.data = data;
+        next = prev = null;
+    }
+}
+*/
+class Solution {
+    // Function to sort the given doubly linked list using Merge Sort.
+    static Node sortDoubly(Node head) {
+        // add your code here
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node[] halves = split(head);
+        Node firstHalf = sortDoubly(halves[0]);
+        Node secondHalf = sortDoubly(halves[1]);
+        return merge(firstHalf, secondHalf);
+    }
+    static Node[] split(Node head){
+        Node slow = head;
+        Node fast = head.next;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node firstHalf = head;
+        Node secondHalf = slow.next;
+        slow.next = null;
+        return new Node[]{firstHalf, secondHalf};
+    }
+    static Node merge(Node first, Node second){
+        if(first == null){
+            return second;
+        }
+        if(second == null){
+            return first;
+        }
+        if(first.data < second.data){
+            first.next = merge(first.next, second);
+            first.next.prev = first;
+            first.prev = null;
+            return first;
+        }
+        else{
+            second.next = merge(first, second.next);
+            second.next.prev = second;
+            second.prev = null;
+            return second;
+        }
+    }
+}
