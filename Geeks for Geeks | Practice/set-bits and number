@@ -1,0 +1,7 @@
+class Solution{
+    static int bitMultiply(int N){
+        // coe here
+        int temp = Integer.bitCount(N);
+        return N*temp;
+    }
+}
