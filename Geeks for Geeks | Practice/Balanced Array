@@ -1,0 +1,16 @@
+class Solution
+{
+    long minValueToBalance(long a[] ,int n)
+    {
+    long rs=0;
+    long ls=0;
+    for(int i=0;i<n/2;i++){
+        rs=rs+a[i];
+    }
+    for(int j=n/2;j<n;j++){
+        ls=ls+a[j];
+    }
+    return Math.abs(rs-ls);
+
+    }
+}
