@@ -1,0 +1,10 @@
+class Solution{
+    static String getBinaryRep(int N){
+        // code here
+        String result = "000000000000000000000000000000";
+        String binValue = Integer.toBinaryString(N);
+        result += binValue;
+        result = result.substring(result.length() - 30);
+        return result;
+    }
+}
