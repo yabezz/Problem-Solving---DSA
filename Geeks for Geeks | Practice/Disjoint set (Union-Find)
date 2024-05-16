@@ -1,0 +1,24 @@
+class GfG
+{
+	int find(int parent[],int X)
+    {
+        if(parent[X] == X){
+          return X;
+        }else{
+          int result = find(parent,parent[X]);
+          parent[X] = result;
+          return result;
+        }
+          
+	}
+	void unionSet(int parent[],int X,int Z)
+    {
+         int x_parent = find(parent,X);
+         int z_parent = find(parent,Z);
+         if(x_parent == z_parent){
+             return ;
+         }else{
+             parent[x_parent] = z_parent;
+         }
+	}
+}
