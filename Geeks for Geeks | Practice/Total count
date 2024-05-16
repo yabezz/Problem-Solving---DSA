@@ -1,0 +1,12 @@
+class Solution {
+    int totalCount(int[] arr, int n, int k) {
+        int tot = 0 ;
+        for(int a:arr){
+            if(a%k==0)
+                tot+=(a/k);
+            else
+                tot+=(a/k)+1;
+        }
+        return tot;
+    }
+}
