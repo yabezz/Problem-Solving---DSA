@@ -1,0 +1,12 @@
+class Solution {
+     static long canBeSumofConsec(long n) { 
+       if(n==1L)
+         return 0L;
+       
+       if((n&(n-1))==0)
+          return 0L;
+
+
+      return 1L;
+   }
+}
