@@ -1,0 +1,9 @@
+class Solution{
+    static long nearestPowerOf2(long N) {
+        int i = 0;
+        while (Math.pow(2, i) < N) {
+            i++;
+        }
+        return (long) Math.pow(2, i);
+    }
+}
