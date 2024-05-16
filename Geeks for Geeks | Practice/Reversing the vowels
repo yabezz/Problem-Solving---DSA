@@ -1,0 +1,30 @@
+class Solution
+{
+    String modify (String s) {
+        int i = 0, j = s.length() - 1;
+        StringBuilder sb = new StringBuilder(s);
+        ArrayList<Character> vov = new ArrayList<>();
+        vov.add('a');
+        vov.add('e');
+        vov.add('i');
+        vov.add('o');
+        vov.add('u');
+        
+        while(i < j){
+            if(vov.contains(sb.charAt(i)) && vov.contains(sb.charAt(j))){
+                char tmp = sb.charAt(i);
+                sb.setCharAt(i, sb.charAt(j));
+                sb.setCharAt(j, tmp);
+                i++; j--;
+            }else if(vov.contains(sb.charAt(i)) && !vov.contains(sb.charAt(j))){
+                j--;
+            }else if(!vov.contains(sb.charAt(i)) && vov.contains(sb.charAt(j))){
+                i++;
+            }else{
+                i++; j--;
+            }
+        }
+        
+        return sb.toString();
+    }
+}
