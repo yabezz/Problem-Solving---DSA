@@ -1,0 +1,30 @@
+class GfG
+{
+public boolean searchEle(List<Integer> a,int x)
+       {
+//add code here.
+for(int i=0;i<a.size();i++){
+    if(a.get(i)==x){
+        return true;
+    }
+}
+return false;
+}
+public boolean insertEle(List<Integer> a,int y,int yi)
+        {
+              //add code here.
+              a.add(yi, y);
+              return true;
+              
+}
+public boolean deleteEle(List<Integer> a,int z)
+        {
+//add code here.
+//System.out.println(a.contains(z));
+if(a.contains(z)){
+    a.remove(Integer.valueOf(z));
+    return true;
+}
+return false;
+}
+}
