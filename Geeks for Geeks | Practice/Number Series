@@ -1,0 +1,13 @@
+class Solution {
+    static int findNth(int n){
+        int m=0;
+        int k=n&(~(n-1));
+        while(k!=0)
+
+        {
+            m++;
+            k=k/2;
+        }
+        return m-1;
+    }
+}
