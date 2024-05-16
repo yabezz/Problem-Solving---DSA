@@ -1,0 +1,14 @@
+class Solution {
+    static int getCount(int X) {
+        // code here
+        int count=0;
+        int n = X;
+        while(n!=0){
+            if((n&1)==1){
+                count++;
+            }
+            n>>=1;
+        }
+        return (X-(int)Math.pow(2,count)+1);
+    }
+}
