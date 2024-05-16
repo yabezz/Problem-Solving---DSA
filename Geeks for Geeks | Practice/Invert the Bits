@@ -1,0 +1,6 @@
+class Solution{
+    static long invertBits(long N){
+        //code here
+         return ((long)Math.pow(2, 32)-1)^N;
+    }
+}
