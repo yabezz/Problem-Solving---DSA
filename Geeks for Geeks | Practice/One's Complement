@@ -1,0 +1,11 @@
+class Solution{
+    static int onesComplement(int N){
+        
+        int result = (int)(Math.log(N) / Math.log(2));
+        result++;
+        int res=(int)Math.pow(2,result);
+       
+        res=(res-1)^N;
+        return res;
+    }
+}
