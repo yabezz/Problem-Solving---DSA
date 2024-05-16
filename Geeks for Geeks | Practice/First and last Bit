@@ -1,0 +1,11 @@
+class Solution
+{
+    int onlyFirstAndLastAreSet(long n)
+    {
+        //code here.
+        long len=Long.toBinaryString(n).length();
+        int mask = 1 << (len-1);
+        if(((n ^ 1) ^ mask) == 0 ) return 1;
+        else return 0;
+    }
+}
