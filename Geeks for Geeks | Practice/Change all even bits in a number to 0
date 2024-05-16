@@ -1,0 +1,6 @@
+class Solution {
+    static long convertEvenBitToZero(long n) {
+        // code here
+        return (n&0xAAAAAAAA);
+    }
+}
