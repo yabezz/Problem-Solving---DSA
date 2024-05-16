@@ -1,0 +1,9 @@
+class GfG
+{
+    public static int findMax(Height arr[], int n){
+        int max=0;
+        for(int i=0;i<n;i++) max=Math.max(arr[i].feet*12+arr[i].inches, max);
+        return max;
+    }
+    
+}
