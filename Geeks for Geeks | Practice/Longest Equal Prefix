@@ -1,0 +1,24 @@
+class GFG
+{
+    long findIndex(long arr[] ,int X,int Y,int N)
+    {
+        // Your code goes 
+        long ans = -1;
+        int x_count = 0;
+        int y_count = 0;
+        
+        for(int i=0; i<N; i++){
+            if((int)arr[i] == X){
+                x_count++;
+            }
+            if((int)arr[i] == Y){
+                y_count++;
+            }
+            if(x_count == y_count && x_count > 0 && y_count > 0){
+                ans = i;
+            }
+        }
+        
+        return ans;
+    }
+}
