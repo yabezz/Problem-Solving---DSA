@@ -1,0 +1,22 @@
+class Solution
+{
+    long minOperations(long arr[], int N)
+    {
+        long sum = 0; 
+        long avg = 0;
+        long result = 0;
+        for(long x : arr){
+            sum += x;
+        }
+        avg = (long)(sum/N);
+        if(sum != (avg * N)){
+            return -1;
+        }
+        for(long x : arr){
+            if(x < avg){
+                result += (avg - x);
+            }
+        }
+        return result;
+    }
+}
