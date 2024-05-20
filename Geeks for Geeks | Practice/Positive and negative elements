@@ -1,0 +1,22 @@
+class Solution
+{
+    ArrayList<Long> arranged(long a[], int n)
+    {
+        int i=0;
+        int j=0;
+        
+        while(i<n && a[i]<0) i++;
+        while(j<n && a[j]>0) j++;
+        ArrayList<Long> l=new ArrayList<>();
+        while(i<n || j<n)
+        {
+            l.add(a[i]);i++;
+            while(i<n && a[i]<0) i++;
+            l.add(a[j]);j++;
+            while(j<n && a[j]>0) j++;
+        }
+        
+        return l;
+
+    }
+}
