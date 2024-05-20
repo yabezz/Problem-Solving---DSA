@@ -1,0 +1,27 @@
+class Complete{
+    
+   
+    // Function for finding maximum and value pair
+    public static String Country_at_war (int arr[], int brr[], int n) {
+        //Complete the function
+        int acount = 0;
+        int bcount = 0;
+        for(int i=0; i<n; i++){
+            if(arr[i]>brr[i]){
+                acount++;
+            }else if(arr[i] == brr[i]){
+                continue;
+            }else{
+                bcount++;
+            }
+        }
+        if(acount > bcount)
+        return "A";
+        if(acount < bcount)
+        return "B";
+        
+        return "DRAW";
+    }
+    
+    
+}
