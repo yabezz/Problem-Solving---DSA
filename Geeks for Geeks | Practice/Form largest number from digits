@@ -1,0 +1,22 @@
+class Solution
+{
+    
+    public String MaxNumber(long arr[], long n)
+    {
+        //code here.
+        StringBuilder ans = new StringBuilder();
+        int[] fArr = new int[10];
+        for (long i : arr) {
+            fArr[(int) i]++;
+        }
+        for (int i = 9; i >= 0; i--) {
+            int numberOfElements = fArr[i];
+            if (numberOfElements > 0) {
+                for (int j = 0; j < numberOfElements; j++) {
+                    ans.append(i);
+                }
+            }
+        }
+        return ans.toString();
+    }
+}
