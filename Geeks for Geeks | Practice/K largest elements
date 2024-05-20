@@ -1,0 +1,13 @@
+class Solution
+{
+    //Function to return k largest elements from an array.
+    public static ArrayList<Integer> kLargest(int arr[], int n, int k)
+    {
+        ArrayList<Integer> result = new ArrayList<>();
+        Arrays.sort(arr);
+        for(int i=n-1;i>=n-k;i--){
+            result.add(arr[i]);
+        }
+        return result;
+    }
+}
