@@ -1,0 +1,21 @@
+class Solution {
+    
+    public int[] removeDuplicate(int A[], int N)
+    {
+        LinkedHashMap<Integer,Integer> lm = new LinkedHashMap<Integer,Integer>();
+        for(int i=0;i<N; i++){
+            if(!lm.containsKey(A[i])){
+                lm.put(A[i],1);
+            }else{
+                lm.put(A[i],lm.get(A[i])+1);
+            }
+        }
+        int ans[] = new int[lm.size()];
+        int j =0;
+        
+        for(Integer i: lm.keySet()){
+            ans[j++]=i;
+        }
+        return ans;
+    }
+}
