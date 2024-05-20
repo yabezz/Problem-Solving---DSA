@@ -1,0 +1,19 @@
+class Solution
+
+{
+    long sumOfDistinct(long arr[], int N)
+    {
+    Arrays.sort(arr);
+    long sum = 0;
+    HashSet<Long> list = new HashSet<>();
+    for(long e : arr)
+    {
+        list.add(e);
+    }
+    for(long x : list)
+    {
+        sum += x;
+    }
+    return sum;
+    }
+}
