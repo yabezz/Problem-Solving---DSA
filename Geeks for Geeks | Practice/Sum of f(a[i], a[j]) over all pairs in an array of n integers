@@ -1,0 +1,33 @@
+class Complete{
+    // Function for finding maximum and value pair
+    public static long sum (int arr[], int n) {
+        long sum = Arrays.stream(arr).sum();
+        
+        HashMap<Integer,Integer> hm = new HashMap<>();
+        for(int i=0;i<n;i++)
+            hm.put(arr[i],hm.getOrDefault(arr[i],0)+1);
+        
+        long ans = 0l;
+        int size = n;
+        for(int i=0;i<n-1;i++)
+        {
+            sum-=arr[i];
+            size--;
+            
+            int freq = hm.get(arr[i]);
+            if(freq==1)
+                hm.remove(arr[i]);
+            else
+                hm.put(arr[i],freq-1);
+            
+            ans+=(sum-size*arr[i]);
+            if(hm.containsKey(arr[i]-1))
+            ans += hm.get(arr[i]-1);
+            
+            if(hm.containsKey(arr[i]+1))
+            ans -= hm.get(arr[i]+1);
+        }
+        
+        return ans;
+    }
+}
