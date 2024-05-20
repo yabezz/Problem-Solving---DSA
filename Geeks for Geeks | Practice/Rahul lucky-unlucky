@@ -1,0 +1,30 @@
+class Solution {
+    
+    public int flippedIndexes(char a[], long n, long getAnswer[])
+    {
+        // Your code goes here
+     int count = 0;
+    int j = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] == 'T') {
+            count++;
+            getAnswer[j] = i + 1;
+            j++;
+            a[i] = 'H';
+            if (i + 1 < n) {
+                if (a[i + 1] == 'H') {
+                    a[i + 1] = 'T';
+                } else {
+                    a[i + 1] = 'H';
+                }
+            } else {
+                break;
+            }
+        }
+    }
+
+    // Return the count of flips
+    return count;
+}
+}
