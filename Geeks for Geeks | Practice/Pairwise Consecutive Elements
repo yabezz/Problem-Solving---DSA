@@ -1,0 +1,18 @@
+class GFG
+{
+    public static boolean pairWiseConsecutive(Stack<Integer> st)
+    {
+        // Your code here
+        if((st.size() % 2) != 0){
+            st.pop();
+        }
+        while(!st.isEmpty()){
+            int n=st.pop();
+            int m=st.pop();
+            if(n-m!=1){
+                return false;
+            }
+        }
+        return true;
+    }
+}
