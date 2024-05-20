@@ -1,0 +1,37 @@
+class Solution{
+    
+  
+    ArrayList<Integer> kSmallestElements(int arr[], int n, int k)
+    {
+        // Complete the function
+        ArrayList<Integer> ans = new ArrayList<>();
+		
+		List<Integer> ls = new ArrayList<>();
+		
+		for(int x : arr) {
+			ls.add(x);
+		}
+		
+        Collections.sort(ls);
+        
+        int last_element = ls.get(k-1);
+        		
+        int diff = k - ls.indexOf(last_element);
+                                
+        for(int x : arr) {        	
+        	if(x == last_element) {
+        		if(diff > 0) {
+        			ans.add(x);
+            		diff--;
+        		}     		
+        	}        	
+        	else if(x < last_element) {
+        		ans.add(x);
+        	}  	
+        }
+        
+        return ans;
+    }
+  
+    
+}
