@@ -1,0 +1,18 @@
+class Compute {
+    
+    public int[] uniqueId(long arr[], long n)
+    {
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            if(!(list.contains((int)arr[i]))){
+                list.add((int)arr[i]);
+            }
+        }
+        int a[] = new int[list.size()];
+        for(int i=0;i<list.size();i++){
+            a[i] = list.get(i);
+        }
+        return a;
+        
+    }
+}
