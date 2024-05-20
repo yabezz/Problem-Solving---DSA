@@ -1,0 +1,23 @@
+class Solution 
+{
+    int checkFib(long arr[] ,int N)
+    {
+        int c=0;
+        for(long i:arr){
+            if(F(i)){
+                c++;
+            }
+        }
+        return c;
+    }
+    boolean F(long n){
+        if(n==0) return true;
+        int a=0,b=1;
+        int r=a+b;
+        while(r<=n){
+            if(r==n) return true;
+            a=b; b=r; r=a+b;
+        }
+        return false;
+    }
+}
