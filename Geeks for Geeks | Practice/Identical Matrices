@@ -1,0 +1,8 @@
+class Solution {
+    int areMatricesIdentical(int N, int[][] Grid1, int[][] Grid2) {
+        if(Arrays.deepEquals(Grid1,Grid2))
+        return 1;
+        else
+        return 0;
+    }
+}
