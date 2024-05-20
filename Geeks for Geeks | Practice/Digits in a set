@@ -1,0 +1,20 @@
+class Solution {
+    int countNumbers(int n) {
+        int count = 0;
+        for(int i = 1; i <= n; i++) {
+            if(isValid(i)) {
+                count++;
+            }    
+        }
+        return count;
+    }
+    
+    boolean isValid(int num) {
+        while(num > 0) {
+            if(num % 10 <= 0 || num % 10 > 5)
+                return false;
+            num = num / 10;    
+        }
+        return true;
+    }
+}
