@@ -1,0 +1,24 @@
+class Solution
+{
+    // function returns the head of the linkedlist
+    Node deleteNode(Node head,int x)
+    {
+        ArrayList<Integer> arrList = new ArrayList<>();
+    Node current = head;
+    while(current!=null){
+        arrList.add(current.data);
+        current = current.next;
+    }
+    
+    arrList.remove(x-1);
+    
+    Node dummy = new Node(0);
+    Node finalHead= dummy;
+    
+    for(Integer a: arrList ){
+        finalHead.next = new Node(a);
+        finalHead = finalHead.next;
+    }
+    return dummy.next;
+    }
+}
