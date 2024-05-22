@@ -1,0 +1,26 @@
+class Solution
+{
+    public String solve(String a)
+    {
+        //code here
+        String vowels = "aeiou";
+        Set<Character> set = new HashSet<>();
+        
+        for(int i=0; i<a.length(); i++){
+            set.add(a.charAt(i));
+        }
+        
+        int count =0;
+        
+        for(char c: set){
+            if(!vowels.contains(String.valueOf(c))){
+                count++;
+            }
+        }
+        if(count%2 ==0){
+            return "SHE!";
+        }
+        return "HE!";
+    }
+    
+}
