@@ -1,0 +1,27 @@
+class Sol
+{
+    int isPossible (String S)
+    {
+        int len=S.length();
+        
+        String first="";
+        String last="";
+        
+        int mid=len/2;
+        if(len%2==0)
+        {
+            first=S.substring(0,mid);
+            last=S.substring(mid,len);
+        }
+        else
+        {
+            first=S.substring(0,mid);
+            last=S.substring(mid+1,len);
+        }
+        if(first.equals(last))
+        {
+            return 1;
+        }
+        return 0;
+    }
+}
