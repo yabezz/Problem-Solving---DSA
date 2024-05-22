@@ -1,0 +1,24 @@
+class Solution
+{
+    char firstRep(String S)
+    {
+        // your code here
+        int mini=S.length();
+        char res='#';
+        HashMap<Character,Integer>hm=new HashMap<>();
+        for(int i=0;i<S.length();i++)
+        {
+            if(hm.containsKey(S.charAt(i)))
+            {
+                if(hm.get(S.charAt(i))<mini)
+                {
+                    mini=hm.get(S.charAt(i));
+                    res=S.charAt(i);
+                }
+            }
+            else
+                hm.put(S.charAt(i),i);
+        }
+        return res;
+    }
+}
