@@ -1,0 +1,24 @@
+class Sol
+{
+    int getCount (String S, int N)
+    {
+       HashMap<Character,Integer> temp = new HashMap<>();
+       temp.put(S.charAt(0),1);
+       for(int i=1;i<S.length();i++)
+       {
+           char ch = S.charAt(i);
+           if(ch!=S.charAt(i-1)){
+            if(temp.get(ch)==null)
+                temp.put(ch,1);
+            else
+                temp.put(ch,temp.get(ch)+1);    
+           }
+       }
+       int count=0;
+       for(Map.Entry<Character,Integer> entry: temp.entrySet()){
+           if(entry.getValue()==N)
+            count++;
+       }
+       return count;
+    }
+}
