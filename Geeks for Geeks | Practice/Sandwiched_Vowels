@@ -1,0 +1,28 @@
+class Complete{
+    
+   
+    public static String Sandwiched_Vowel(String str) 
+    { 
+        // Complete function
+        StringBuilder sb = new StringBuilder();
+        ArrayList<Character> list = new ArrayList<>();
+        list.add('a');
+        list.add('e');
+        list.add('i');
+        list.add('o');
+        list.add('u');
+        char[] ch = str.toCharArray();
+        for(int i=0; i<ch.length-2; i++){
+            if(!list.contains(ch[i]) && list.contains(ch[i+1]) 
+               &&!list.contains(ch[i+2])){
+                  ch[i+1] = ' '; 
+               }
+        }
+        
+        for(int i=0; i<ch.length; i++){
+            if(ch[i]!=' ')
+            sb.append(ch[i]);
+        }
+        return sb.toString();
+    } 
+}
