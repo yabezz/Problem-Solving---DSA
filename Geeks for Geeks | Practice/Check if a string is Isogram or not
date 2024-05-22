@@ -1,0 +1,16 @@
+class Solution
+{
+    //Function to check if a string is Isogram or not.
+    static boolean isIsogram(String data){
+        //Your code here
+        
+      boolean ar[]= new boolean[26];
+      for(char c: data.toCharArray()){
+          
+          if(ar[c-'a']==true)return false;
+          
+        ar[c-'a']=true;
+      }
+      return true;
+    }
+}
