@@ -1,0 +1,25 @@
+class Solution
+{
+    String UncommonChars(String A, String B)
+    {
+        // code here
+        TreeSet<Character> set = new TreeSet<>();
+        for(int i=0; i<A.length(); i++){
+            if(!B.contains(A.charAt(i)+""))
+            set.add(A.charAt(i));
+        }
+        for(int i=0; i<B.length(); i++){
+            if(!A.contains(B.charAt(i)+""))
+            set.add(B.charAt(i));
+        }
+         
+        StringBuilder sb = new StringBuilder();
+        for(char ch : set){
+            sb.append(ch);
+        }
+        if(sb.toString().isEmpty())
+        return "-1";
+        
+        return sb.toString();
+    }
+}
