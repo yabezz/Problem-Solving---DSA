@@ -1,0 +1,24 @@
+class Solution
+{
+    public boolean distinctAdjacentElement(int arr[] , int n)
+    {
+        //code here.
+        Arrays.sort(arr);
+        int count = 1;
+        int maxCount = 0;
+        for(int i=0; i<n-1; i++){
+            if(arr[i] == arr[i+1]){
+            count++;
+            if(count>maxCount){
+                maxCount = count;
+            }
+            }else{
+                count = 1;
+            }
+        }
+        if(maxCount <= (n+1)/2)
+        return true;
+        
+        return false;
+    }
+}
