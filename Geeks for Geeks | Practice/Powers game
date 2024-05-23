@@ -1,0 +1,18 @@
+class Solve {
+    int[] getFreq(int x, int n) {
+        // code here
+        long number = 1;
+        int[] fr = new int[10];
+        for(int i=1; i<=n; i++){
+          number = number*x;
+          long num = number;
+           while(num != 0){
+               long rem = num %10;
+               fr[(int)rem]++;
+               num = num/10;
+           }
+        }
+        
+        return fr;
+    }
+}
