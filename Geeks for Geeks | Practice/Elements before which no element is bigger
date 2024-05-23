@@ -1,0 +1,15 @@
+class Solution {
+    static long countElements(long arr[], long n) 
+    {
+        // Your code goes here
+        int count = 1;
+        long max = arr[0];
+        for(int  i = 1; i < n; i++){
+            if(arr[i] > max){
+                count++;
+                max = arr[i];
+            }
+        }
+        return count;
+    }
+}
