@@ -1,0 +1,17 @@
+class Solution
+{
+    long countXorPair(long arr[], int n)
+
+    {
+      long odd=0;
+      long even=0;
+      for(long i:arr){
+          if(i%2==0){
+              even++;
+          }else{
+              odd++;
+          }
+      }
+      return odd*even;
+    }
+}
