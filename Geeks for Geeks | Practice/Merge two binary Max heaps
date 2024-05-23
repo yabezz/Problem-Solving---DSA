@@ -1,0 +1,22 @@
+class Solution{
+    public int[] mergeHeaps(int[] a, int[] b, int n, int m) {
+        // your code here
+        int ans[]=new int [n+m];
+        int i=0,j=0,k=0;
+        while(k<n && j<m){
+            if(a[k]>b[j]){
+                ans[i]=a[k];
+                i++;
+                k++;
+            }
+            else{
+                ans[i]=b[j];
+                j++;
+                i++;
+            }
+        }
+        while(k<n) ans[i++]=a[k++];
+        while(j<m) ans[i++]=b[j++];
+        return ans;
+    }
+}
