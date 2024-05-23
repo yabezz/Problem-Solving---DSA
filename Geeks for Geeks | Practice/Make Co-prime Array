@@ -1,0 +1,23 @@
+class Solution{
+    int countCoPrime(int a[], int n)
+    { 
+        // Complete the function
+        int ans = 0;
+        for(int i=0; i<a.length - 1; i++){
+            ans += isNotCoPrime(a[i], a[i+1]);
+        }
+        return ans;
+    }
+    
+    int isNotCoPrime(int x, int y){
+        if(x < 2 || y < 2){
+            return 0;
+        }
+        do{
+            int temp = x%y;
+            x = y;
+            y = temp;
+        }while(y != 0);
+        return (x==1) ? 0 : 1;
+    }
+}
