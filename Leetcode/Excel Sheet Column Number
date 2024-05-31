@@ -1,0 +1,11 @@
+class Solution {
+    public int titleToNumber(String columnTitle) {
+        int output = 0;
+        char str[] = columnTitle.toCharArray();
+        for(char ch : str){
+            int temp = (ch - 'A') + 1;
+            output = (output * 26) + temp;
+        }
+        return output;
+    }
+}
