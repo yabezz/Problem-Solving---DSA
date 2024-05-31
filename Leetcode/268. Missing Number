@@ -10,3 +10,23 @@ class Solution {
         return xor;
     }
 }
+
+
+Brute force :
+
+class Solution {
+    public int missingNumber(int[] nums) {
+        int target = nums.length;
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int x : nums)
+        {
+            al.add(x);
+        }
+        for(int i=0;i<=target;i++){
+            if(al.indexOf(i)==-1){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
