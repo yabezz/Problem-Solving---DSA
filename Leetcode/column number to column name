@@ -1,0 +1,20 @@
+package zoho;
+
+import java.util.*;
+
+public class ColNameToNumber {
+    public static void main(String[] args) {
+        // String str = new Scanner(System.in).nextLine();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        StringBuilder sb = new StringBuilder();
+        while(n>0){
+            int rem = --n % 26;
+            sb.append((char)('A' + rem));
+            n/=26;
+        }
+        sb.reverse();
+        System.out.println(sb.toString());
+        sc.close();
+    }
+}
